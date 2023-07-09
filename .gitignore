@@ -1,3 +1,4 @@
 testdatabase.db
 venv
 .DS_Store
+database.db

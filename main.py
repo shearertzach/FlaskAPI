@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  db = sqlite3.connect('testdatabase.db')
+  db = sqlite3.connect('database.db')
   cursor = db.cursor()
 
   for _ in range(1, 10):
