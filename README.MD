@@ -1,3 +1,5 @@
+### DISCLAIMER: This README.md file has sections that were written and reviewed by ChatGPT
+
 # FlaskAPI Project
 
 This is a FlaskAPI project designed to help you regain knowledge of Flask and explore the integration of SQLite with Flask. The application will serve as an API that can be used by a frontend application in the future.
@@ -7,7 +9,7 @@ This is a FlaskAPI project designed to help you regain knowledge of Flask and ex
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/shearertzach/FlaskAPI
    ```
 
 2. Navigate to the project directory:
@@ -41,13 +43,13 @@ This is a FlaskAPI project designed to help you regain knowledge of Flask and ex
 2. Start the Flask development server:
 
    ```bash
-   flask run
+    gunicorn -c gunicorn.conf.py main:app
    ```
 
 3. The FlaskAPI should now be running locally on your machine. You can access it through the following URL:
 
    ```
-   http://localhost:5000
+   http://localhost:8000
    ```
 
 ## Endpoints
