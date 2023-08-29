@@ -1,9 +1,12 @@
 from flask import Flask
+from lib.response import returnResponse
 import sqlite3
 import random
+import json
 
 
 app = Flask(__name__)
+app.debug = True
 
 
 @app.route('/')
@@ -24,6 +27,16 @@ def index():
   db.commit()
 
   return '<h1>Added users to database</h1>'
+
+@app.route('/responsetesting')
+def responseTesting():
+  data = {
+      'message': 'Hello, people!',
+      'status': 'success'
+  }
+  json_data = json.dumps(data)  # Convert the data to JSON string
+
+  return returnResponse("OK", data=json_data)
 
 
 
